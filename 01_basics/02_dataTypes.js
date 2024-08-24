@@ -96,3 +96,37 @@ console.log((typeof myFunction));  // function
        Function  =>  function
        Object  =>  object
 */
+
+//************************************************************* */
+
+/*
+Memory and threads in javascript
+
+stack and heap
+stack(Primitive) , heap(Non-Primitive)
+
+*/
+let myYoutubename = "wazir"
+
+let anothername = myYoutubename
+anothername="shiv"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let user1={
+    email:"user@google.com",
+    upi:"987@ybl"
+}
+
+let user2=user1
+user2.email="shiv@email.com"
+
+console.log(user1.email);
+console.log(user2.email);
+
+/*see the support image for
+understanding refrence of memory for heap and stack
+in heap, one memory space is used for all the refrences
+email for both user hav been changed
+ */
