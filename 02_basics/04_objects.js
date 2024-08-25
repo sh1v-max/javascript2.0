@@ -73,3 +73,38 @@ console.log(tinderUser.hasOwnProperty('loggedIn'));
 console.log(tinderUser.hasOwnProperty('loggedOut'));
 
 //check ref image
+
+
+console.log("==================================================");
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "wazir"
+}
+course.courseInstructor
+course.coursename
+course.price
+//rather than using course. all the time, we can use something else...
+
+const {courseInstructor} = course
+const {courseInstructor: instructor} = course
+console.log(courseInstructor);
+console.log(instructor);
+
+
+console.log("=============object destructuring==================");
+
+let user = {
+    name0: "wazir baba",
+    age: 25,
+    city: "delhi"
+}
+let{name0, age, city} = user; // all parameters should be same as key inside object
+console.log(name0);
+console.log(age);
+console.log(city);
+
+// see the curly braces({}) and its destructuring.
+
+
+
