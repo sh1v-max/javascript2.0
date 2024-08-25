@@ -67,3 +67,30 @@ SHIVGC
 shiv50value
 hello my name is shivgc and my repo count is 50
 */
+
+/* additionla knowledge:
+template strings: use backticks(``) rather than quotes(""), 
+1. backtick allow both single and double quotes inside string
+2. also allow multiline strings, and interpolations(${}),
+        let firstName = "John";
+        let lastName = "Doe";
+
+        let text = `Welcome ${firstName}, ${lastName}!`;
+
+3. expressions in string:
+    let price = 10;
+    let VAT = 0.25;
+
+    let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+4. HTML template:
+    let header = "Template Strings";
+    let tags = ["template strings", "javascript", "es6"];
+
+    let html = `<h2>${header}</h2><ul>`;
+    for (const x of tags) {
+    html += `<li>${x}</li>`;
+    }
+
+    html += `</ul>`;
+    */
