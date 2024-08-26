@@ -1,3 +1,5 @@
+//JAVASCRIPT IS SINGLE THREADED
+
 const accountId = 144553
 let accountEmail="shiv@gmail.com"
 var accountPassword="12345"
