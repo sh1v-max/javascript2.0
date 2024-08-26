@@ -107,7 +107,7 @@ const addTwo0 = function(num){
 console.log(addTwo0(5));
 //putput: 7
 
-//this is called HOISTING
+//this is called  HOISTING
 
 /* note: both are functions, addone is basic functions and addTwo is using 
 variable to create function ie const */
