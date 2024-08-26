@@ -1,5 +1,7 @@
 //https://www.geeksforgeeks.org/difference-between-var-let-and-const-keywords-in-javascript/
 
+//https://www.youtube.com/watch?v=eWwge2YpHhc&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=22
+
 // global scope acts differently in code ide and in inspect/console of browser
 
 let a0 = 10
@@ -39,4 +41,73 @@ if(true){
 console.log(x);
 //value of x outside is still accessible by x outside as well as inside
 
+console.log("==================nested scope=====================");
 
+function one(){
+    const unsername = "shiv"
+    console.log(unsername); // will pring username, called below
+    
+    function two() {
+        const website = "youtube"
+        console.log(unsername); //will print username
+        console.log(website);
+        
+    }
+    // console.log(website); // website is not defined
+    two()
+}
+one() // will print shiv
+
+console.log("================with if else nested=================");
+
+if (true) {
+    const username = "wazir"
+    if (username=== "wazir") {
+        const website= " youtube"
+        console.log(username + website);
+        
+    }
+    //console.log(website);// wont get printed, as called outside block scope
+    // same with username
+}
+// console.log(username);
+
+console.log("==================interesting========================");
+
+// notice that we are using/calling funtion ,console.log before and after the functions
+
+//1.
+console.log(addone(5));
+function addone(num){
+    return num +1
+} 
+// output: 6
+
+//2.
+function addone(num){
+    return num +1
+}
+console.log(addone(5)); // we have returned it only, not printing it
+//output: 6
+
+//3.
+console.log(addTwo(5));
+const addTwo = function(num){
+    return num + 2
+}
+//output: Cannot access 'addTwo' before initialization
+// declaring function while holding it into a variable causes this problem.
+// we can asses before initialization in case or general function but not
+// in case of variable holding function
+
+//4.
+const addTwo0 = function(num){
+    return num + 2
+}
+console.log(addTwo0(5));
+//putput: 7
+
+//this is called HOISTING
+
+/* note: both are functions, addone is basic functions and addTwo is using 
+variable to create function ie const */
