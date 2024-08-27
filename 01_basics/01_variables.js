@@ -3,14 +3,14 @@
 const accountId = 144553
 let accountEmail="shiv@gmail.com"
 var accountPassword="12345"
-accountCity="jaipur"
+//accountCity="jaipur"
 let accountState;
 
-//ccountId=2 //not allowed
+//accountId=2 //not allowed
 
 accountEmail="hchcAgmail.com"
 accountPassword="21212121"
-accountCity="bengaluru"
+//accountCity="bengaluru"
 console.log(accountId);
 
 /*
