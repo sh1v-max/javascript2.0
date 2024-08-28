@@ -9,11 +9,45 @@ https://youtu.be/Ab6K57WjWTE?si=gyYXcGJ290cA43m8
 <head>
     <meta charset="UTF-8">
     <title>Dom Learning</title>
+    <style>
+        .bg-black{
+            background-color: rgb(32, 32, 32);
+            color: rgb(202, 202, 202);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-black">
     <div class="bg-black">
         <h1 id="title" class="heading">DOM learning on chai aur code</h1>
         <p>Lerem ipsum dolor sit amet</p>
     </div>
 </body>
-</html>
+</html>  
+
+<!--
+major document methods...
+document.getElementById('title') // we have to pass id inside arg 
+    see in line 21, id of h1 tag is title and class is heading so we will pass class as id as argument
+    and it will return whole line
+    
+    document.getElementById('title')
+        <h1 id=​"title" class=​"heading">​DOM learning on chai aur code​</h1>​
+    document.getElementById('title').id
+        'title'
+    document.getElementById('title').class
+        undefined
+    document.getElementById('title').className
+        'heading'
+
+class is referred as className that why we always write className and not class
+
+see ref image
+
+//https://youtu.be/Ab6K57WjWTE?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=471
+important: watch video
+
+using document.getElementById('title').setAttribute('class','tess')
+// setAttribute method requires 2 arg, class and suggested name of class to set or change it
+class name was heading, but after using setAttribute, it will change to test
+(see ref img 2 and 3)
+-->
