@@ -1,0 +1,72 @@
+<!--
+https://youtu.be/xAvTgCsCHLs?si=kRpAP9Tn8KvIh1vO
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM chai our code</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <div class="parent">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">wednesday</div>
+        <div class="day">thursday</div>
+    </div>
+</body>
+<script>
+    //selecting parent element
+    const parent = document.querySelector('.parent')//we write class using .(dot)
+    console.log(parent); //to get all the parents (output will be class)
+    console.log(parent.children); // to get all child withing that parent (output will be HTMLCollection)
+    // output: HTMLCollection(4) [div.day, div.day, div.day, div.day]
+    console.log(parent.children[1].innerHTML); // output: friday
+    
+    console.log(`===========with for loop====================`);
+    
+    for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);  
+    }
+    
+    console.log(`====try styling=====`);
+    
+    parent.children[1].style.color = "orange"
+    console.log(parent.firstElementChild); // it will select the first child
+    //output: <div class="day">monday</div>
+    console.log(parent.lastElementChild); // last child
+    //output: <div class="day">thursday</div>
+
+    const day1 = document.querySelector('.day') //targetting object (day)
+    console.log(day1);
+    //output: <div class="day">monday</div>
+    console.log(day1.parentElement); // getting parent element of day1
+    /*output:
+        <div class="parent">
+            <div class="day">monday</div>
+            <div class="day">tuesday</div>
+            <div class="day">wednesday</div>
+            <div class="day">thursday</div>
+        </div>
+    */
+    console.log(day1.nextElementSibling);// traking next element sibling
+    //output: <div class="day" style="color: orange;">tuesday</div>
+    // as tuesday is next to monday
+
+    console.log("==========nodes==========");
+    
+    console.log("NODES: ", parent.childNodes);// node in DOM is an html object
+    // here node is not only days/div, it also contain all key pressed ie line-breake/enter/nextline or inbetween texts
+    /*output: 
+        NODES:  
+        NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+    
+        https://youtu.be/xAvTgCsCHLs?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=834
+    watch video
+    */
+    
+
+</script>
+</html>
