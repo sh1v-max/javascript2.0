@@ -18,36 +18,47 @@ https://youtu.be/Ab6K57WjWTE?si=gyYXcGJ290cA43m8
 </head>
 <body class="bg-black">
     <div class="bg-black">
-        <h1 id="title" class="heading">DOM learning on chai aur code</h1>
+        <h1 id="title" class="heading">DOM learning on chai aur code <span style="display: none;">test text</span> </h1>
         <p>Lerem ipsum dolor sit amet</p>
+        <!--
+            major document methods...
+            document.getElementById('title') // we have to pass id inside arg 
+                see in line 21, id of h1 tag is title and class is heading so we will pass class as id as argument
+                and it will return whole line
+                
+                document.getElementById('title')
+                    <h1 id=​"title" class=​"heading">​DOM learning on chai aur code​</h1>​
+                document.getElementById('title').id
+                    'title'
+                document.getElementById('title').class
+                    undefined
+                document.getElementById('title').className
+                    'heading'
+
+            class is referred as className that why we always write className and not class
+
+            see ref image
+
+            //https://youtu.be/Ab6K57WjWTE?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=471
+            important: watch video
+
+            using document.getElementById('title').setAttribute('class','tess')
+            // setAttribute method requires 2 arg, class and suggested name of class to set or change it
+            class name was heading, but after using setAttribute, it will change to test
+            (see ref img 2 and 3)
+        -->
+        <p>lets see what else we can perform on console</p>
+        <!--
+        title.innerText : it displays actual visible test
+        title.textContent : it display actual text present in the code,
+            some of the text can be hidden using display/some other funtions,
+            that can only be seen by .textContent and not by innerText
+        title.innerHtml : it will print everything with html syntaxx also
+        (sell ref image 4 and 5)
+        -->
+
     </div>
 </body>
 </html>  
 
-<!--
-major document methods...
-document.getElementById('title') // we have to pass id inside arg 
-    see in line 21, id of h1 tag is title and class is heading so we will pass class as id as argument
-    and it will return whole line
-    
-    document.getElementById('title')
-        <h1 id=​"title" class=​"heading">​DOM learning on chai aur code​</h1>​
-    document.getElementById('title').id
-        'title'
-    document.getElementById('title').class
-        undefined
-    document.getElementById('title').className
-        'heading'
 
-class is referred as className that why we always write className and not class
-
-see ref image
-
-//https://youtu.be/Ab6K57WjWTE?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=471
-important: watch video
-
-using document.getElementById('title').setAttribute('class','tess')
-// setAttribute method requires 2 arg, class and suggested name of class to set or change it
-class name was heading, but after using setAttribute, it will change to test
-(see ref img 2 and 3)
--->
