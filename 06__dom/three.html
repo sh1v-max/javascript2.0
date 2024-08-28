@@ -1,0 +1,43 @@
+<!--https://youtu.be/xAvTgCsCHLs?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=1047-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div); //it simply creates a div
+    // <div></div>
+    //now lets add properties in div element
+    div.className = "main" //as class is refred as className
+    div.id = Math.round(Math.random() * 10 + 1) 
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+
+    //https://youtu.be/xAvTgCsCHLs?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=1419
+
+    // div.innerText = "chai aur code"// commenting as it overrides values (see video)
+
+    const addText = document.createTextNode("chai aur code")
+    div.appendChild(addText)
+
+    /*untill now, there is nothing on the display/browser screen
+    as we havent attached any parent/child to div, its just a div 
+    assigned inside memory
+    you will get this simple output on console: 
+        <div class="main" id="2" 
+        title="generated title" 
+        style="background-color: green; 
+        padding: 12px;">chai aur code</div>
+    */
+
+    document.body.appendChild(div) //now finally we are adding div to a child and getting on browser
+
+</script>
+</html>
