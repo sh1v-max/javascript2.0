@@ -20,32 +20,39 @@ https://youtu.be/Ab6K57WjWTE?si=gyYXcGJ290cA43m8
     <div class="bg-black">
         <h1 id="title" class="heading">DOM learning on chai aur code <span style="display: none;">test text</span> </h1>
         <p>Lerem ipsum dolor sit amet</p>
+        <h2>Lerem ipsum dolor sit amet</h2>
+        <h2>Lerem ipsum dolor sit amet</h2>
+        <h2>Lerem ipsum dolor sit amet</h2>
+        <h2>Lerem ipsum dolor sit amet</h2>
         <!--
-            major document methods...
-            document.getElementById('title') // we have to pass id inside arg 
-                see in line 21, id of h1 tag is title and class is heading so we will pass class as id as argument
-                and it will return whole line
-                
-                document.getElementById('title')
-                    <h1 id=​"title" class=​"heading">​DOM learning on chai aur code​</h1>​
-                document.getElementById('title').id
-                    'title'
-                document.getElementById('title').class
-                    undefined
-                document.getElementById('title').className
-                    'heading'
+        =====================================method 1===================================
+        major document methods...
+        document.getElementById('title') // we have to pass id inside arg 
+            see in line 21, id of h1 tag is title and class is heading so we will pass class as id as argument
+            and it will return whole line
+            
+            document.getElementById('title')
+                <h1 id=​"title" class=​"heading">​DOM learning on chai aur code​</h1>​
+            document.getElementById('title').id
+                'title'
+            document.getElementById('title').class
+                undefined
+            document.getElementById('title').className
+                'heading'
 
-            class is referred as className that why we always write className and not class
+        class is referred as className that why we always write className and not class
 
-            see ref image
+        see ref image
 
-            //https://youtu.be/Ab6K57WjWTE?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=471
-            important: watch video
+        //https://youtu.be/Ab6K57WjWTE?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=471
+        important: watch video
 
-            using document.getElementById('title').setAttribute('class','tess')
-            // setAttribute method requires 2 arg, class and suggested name of class to set or change it
-            class name was heading, but after using setAttribute, it will change to test
-            (see ref img 2 and 3)
+        using document.getElementById('title').setAttribute('class','tess')
+        // setAttribute method requires 2 arg, class and suggested name of class to set or change it
+        class name was heading, but after using setAttribute, it will change to test
+        (see ref img 2 and 3)
+
+        ===============================method 2=========================================    
         -->
         <p>lets see what else we can perform on console</p>
         <!--
@@ -55,6 +62,58 @@ https://youtu.be/Ab6K57WjWTE?si=gyYXcGJ290cA43m8
             that can only be seen by .textContent and not by innerText
         title.innerHtml : it will print everything with html syntaxx also
         (sell ref image 4 and 5)
+        
+        ================================method 3======================================
+        -->
+        <p>query selector</p>
+        <!--
+        it selects and returnt specifit parameters given inside argument
+        syntax: document.querySelector('h1')
+            it will return the first <h1> tag it encounters and not all
+        (see ref img 6)
+        -->
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+            <li class="list-item">four</li>
+        </ul>
+
+        <!--
+        =========================method 4======================================== 
+
+        you want to manipulate the first item of unordered list
+        we can do that using query selector my using it multiple times(nested)
+        (see ref img 7)
+
+        the problem is queryselector returns only one value       
+        you cant work with multiple objects
+
+        for that, we will use: wuerySelectorAll
+        
+        =========================method 5========================================= 
+
+        document.querySelectorAll('li')
+            NodeList(3) [li, li, li]
+        const tempLiList = document.querySelectorAll('li')
+            undefined
+        tempLiList
+            NodeList(3) [li, li, li]
+        
+        here, returntype of tepLiList(nodeList) in not an array(but simlar to some of the properties of array)
+        so we cant proceed like we did with querySelector 
+
+        difference in return datatypes: 
+            The querySelector() method returns an Element object that represents 
+            the first element in a document that matches a specified CSS selector. 
+            If there are no matches, it returns null. 
+            The querySelectorAll() method returns a NodeList, which is an array-like 
+            object that contains all the elements that match the specified selector.
+
+        (see ref img 8)
+        ====================================method 6===============================
+        (see ref img 9)
         -->
 
     </div>
