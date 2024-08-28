@@ -54,3 +54,10 @@ const totalPrice = shoppingCart.reduce((acc, item) =>  acc + item.itemPrice, 0)
 console.log(totalPrice);
 //element as an object of array will be stored in item at a time
 //and item.itemPrice will get the price of specifit item and add it
+
+/*
+difference between map, filters, and reduce:
+    map: transforms each element in an array.
+    filter: selects elements from an array based on a condition.
+    reduce: combines all elements in an array into a single value.
+*/
