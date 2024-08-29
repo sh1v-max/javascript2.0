@@ -4,6 +4,8 @@
 
 // global scope acts differently in code ide and in inspect/console of browser
 
+//see scopesref img to see diff between let, var and const(imp)
+
 let a0 = 10
 const b0 = 20
 var c0 = 30
@@ -20,7 +22,7 @@ console.log(c0);
 if(true){
     let a = 10
     const b = 20
-    var c = 30    //var is global scope, can be accesses outside scope
+    var c = 30    //var is global scope, can be accesses outside scope(but not outside functn)
     // thats why we dont use var that much, not inside scope atleast
 }
 /* something declared inside block scope should not be accessible outsside 

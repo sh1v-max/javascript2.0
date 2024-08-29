@@ -1,3 +1,5 @@
+//https://youtu.be/Bn56WahG_t0?si=axL0vL9nNJ7KYoUP
+
 /*A JavaScript function is a block of code designed to perform a particular task.
 A JavaScript function is executed when "something" invokes it (calls it).
 
@@ -25,7 +27,7 @@ function addTwoNumbers0(number1, number2){
 // addTwoNumbers(3, "a")  //3a
 // addTwoNumbers(3, null)  //3
 
-const result0 = addTwoNumbers0(3, 5)
+const result0 = addTwoNumbers0(3, 5)  //see how its diff from above one
 console.log("result: "+ result0);  //undefined
 /*The code is printing undefined because the addTwoNumbers function 
 does not return a value. In JavaScript, when a function does not 
@@ -46,8 +48,10 @@ console.log("result: "+ result);  //result: 8
 
 console.log("=============exploring functions==============");
 
-function loginUserMessage(username="sam"){    //we can use default value to tackle undefined wala condition, wont work for empty string tho(" ")     
-    if (!username/*username === undefined*/) {                      // empty string and undefined(here) are considered as 'false' value in js
+function loginUserMessage(username="sam"){    
+    /*we can use default value to tackle undefined wala condition, wont work for empty 
+    string tho(" ") empty string and undefined(here) are considered as 'false' value in js*/   
+    if (!username/*username === undefined*/) {                      
         console.log("please enter a username");
         return
     }
@@ -55,8 +59,8 @@ function loginUserMessage(username="sam"){    //we can use default value to tack
 }
 
 console.log(loginUserMessage("wazir")); //wazir just logged in
-console.log(loginUserMessage("")); // empty string:  just logged in
-console.log(loginUserMessage()); // undefined, it wont print null
+console.log(loginUserMessage("")); // empty string:  just logged in/undefined
+console.log(loginUserMessage()); //it wont print null(it will print default value)
 // to handle undefined, we will use if statement insite function
 
 /* output:
@@ -67,14 +71,17 @@ console.log(loginUserMessage()); // undefined, it wont print null
     sam just logged in
 */
 
+
+//https://youtu.be/t7ZHPhgdA4U?si=qAJG7mbJPmwAJefr
 console.log("============more with functions=============");
 /* in previous care we were getting only 2 args ie (3, 5), what if we 
 dont know the number of argumennt we will be getting from the user,
 in case of shopping cart*/ 
 
 // function calculateCartPrice(num1){
-function calculateCartPrice0(...num0){  //its not a spread operator, its rest operator here
-                                       //printing rest operator will generate an array
+function calculateCartPrice0(...num0){  
+    /*its not a spread operator, its rest operator here
+    printing rest operator will generate an array*/
     return num0
 }
 console.log(calculateCartPrice0(200, 300, 3500)); // output will be 200
@@ -82,6 +89,8 @@ console.log(calculateCartPrice0(200, 300, 3500)); // output will be 200
 
 //case 2:
 function calculateCartPrice(val1, val2, ...num1){
+    console.log(val1);
+    console.log(val2);
     return num1
 }
 console.log(calculateCartPrice(200, 400, 500, 600)); //[ 500, 600 ]
@@ -95,14 +104,15 @@ const user = {
     price: 199
 }
 
-function handleObject(anyobject){ // anyobject is used to refer to the object that will be passed into the function.
+function handleObject(anyobject){ 
+    // anyobject is used to refer to the object that will be passed into the function.
     console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`);
     
 }
-handleObject(user)
+handleObject(user) //precreated object
 //now passing an object inside function rather than taking input from pre created object
 handleObject({
-    username:"sam",
+    username:"sam", //creating object and calling function at the same time
     price: 299
 })
 /*output: 
