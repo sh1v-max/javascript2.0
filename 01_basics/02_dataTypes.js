@@ -10,7 +10,7 @@ original data... thats why called call by value
 
 "use strict"; //treat all js code as newer version
 
-//alert( 3 + 3) //do same on ispect chrome and see the output
+//alert( 3 + 3) //do same on inspect chrome and see the output
 //alert require different syntex..... we are using node js not browser
 
 console.log(3+
@@ -30,9 +30,9 @@ let age= 18
 // symbol => unique
 // object
 
-console.log(typeof age);
-console.log(typeof null)
-console.log(typeof undefined)
+console.log(typeof age); //number
+console.log(typeof null) //object
+console.log(typeof undefined) //undefined
 
 const score=10
 const scoreValue= 100.3
@@ -80,6 +80,7 @@ const myFunction = function() {
 console.log(typeof bigNumber);     // undefined
 console.log(typeof outsideTemp);   // object
 console.log((typeof myFunction));  // function
+console.log(typeof heros);  //object
 
 /*
 1) Primitive Datatypes

@@ -1,6 +1,6 @@
 let score = "33abc"
-//initial value was 33 but i have changed to 33abc for 
-//condition in line 9
+/*initial value was 33 but i have changed to 33abc for 
+condition in line 9*/
 
 console.log(typeof score);
 console.log(typeof(score));
