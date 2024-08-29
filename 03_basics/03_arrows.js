@@ -8,7 +8,7 @@ const user = {
         console.log(`${this.username}, welcome to website`);
         // this keyword refers to an object/ particular object
         // i specifically wanted to refer username here in object(wazir)
-        // so i used this .... it refers to the current context
+        // so i used this .... it refers to the current context(function scope in this case)
         console.log(this); //output for console.log, everytime function is called, for all context
         /*
         {
@@ -25,11 +25,13 @@ const user = {
         */
     }
 }
-// user.welcomeMessage() // dnt forget to use brackets
-// user.username = "sam" //now current context of username is sam, this.username prints sam
-// user.welcomeMessage()
+user.welcomeMessage() // dnt forget to use brackets
+user.username = "sam" //now current context of username is sam, this.username prints sam
+user.welcomeMessage()
 console.log(this); //output: {} ie empty object
 //now we are using this outside the function, there is no current context
+//remember window function(global object in browser)
+//https://youtu.be/9ksqBa8_txM?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=518
 
 console.log("====================with function========================");
 
@@ -46,7 +48,7 @@ function chai2() {
     console.log(this.username2); //output: undefined
     //this time it wont print username inside functions
     //doesnt work with functions, unable to read username
-       
+    // in previous case it was wroking with object and not function
 }
 chai2()
 
@@ -60,7 +62,7 @@ const chai3 = () => { //arrow function (() => {})
     console.log(this); //{} empty parntheses/object
 }
 chai3()// output will be still undefined
-// this resolves the dout htat you cannot use this function inside both regular and arrow function\
+// this resolves the dout htat you cannot use this function(as expected) inside both regular and arrow function\
 
 //forget everything till now, lets learn arrow functn
 console.log("================learn arrow function=================");
