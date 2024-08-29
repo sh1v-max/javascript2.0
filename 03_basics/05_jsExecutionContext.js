@@ -29,6 +29,8 @@ function addNum(num1, num2){
 }
 let resutlt1 = addNum(val1, val2)
 let resutlt2 = addNum(10, 2)
+console.log(resutlt1);
+console.log(resutlt2);
 
 /*
 step1 /cycle 1: global execution
@@ -47,7 +49,9 @@ step 3/cylce 2: execution phase
         val 1 <--10
         val 2 <--5
     for result 1: addNume(calling of function), it will create a (new variable environment + thread).
-                    REFER TO THE IMAGE FILE 
+                    
+                REFER TO THE IMAGE 1 & 2
+
             it will create memory phase and execution context again...
         memory phase:
             val 1 --> undefined
@@ -65,5 +69,5 @@ step 3/cylce 2: execution phase
 /* what is CALL STACK
     it follows LIFO(last in first out)
     watch video for better understanding
-    see ref image 2
+    see ref image 3
 */
