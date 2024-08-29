@@ -14,7 +14,7 @@ singleton is formed. it is one of its kind,
 using literals doesnt form singleton
 */
 
-//object CONSTRUCTOR
+//object CONSTRUCTOR(we will talk about constructor in next part)
 Object.create
 
 //object LITERALS : declaring
