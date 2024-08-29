@@ -44,6 +44,7 @@ console.log(x);
 //value of x outside is still accessible by x outside as well as inside
 
 console.log("==================nested scope=====================");
+//https://youtu.be/eWwge2YpHhc?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=117
 
 function one(){
     const unsername = "shiv"
@@ -60,7 +61,7 @@ function one(){
 }
 one() // will print shiv
 
-console.log("================with if else nested=================");
+console.log("==============with if else nested===============");
 
 if (true) {
     const username = "wazir"
@@ -74,7 +75,7 @@ if (true) {
 }
 // console.log(username);
 
-console.log("==================interesting========================");
+console.log("============interesting(hoisting)===============");
 
 // notice that we are using/calling funtion ,console.log before and after the functions
 
@@ -89,18 +90,8 @@ function addone(num){
 function addone(num){
     return num +1
 }
-console.log(addone(5)); // we have returned it only, not printing it
+console.log(addone(5)); // we have returned it only, not printing it/now we are printing it
 //output: 6
-
-//3.
-console.log(addTwo(5));
-const addTwo = function(num){
-    return num + 2
-}
-//output: Cannot access 'addTwo' before initialization
-// declaring function while holding it into a variable causes this problem.
-// we can asses before initialization in case or general function but not
-// in case of variable holding function
 
 //4.
 const addTwo0 = function(num){
@@ -113,3 +104,15 @@ console.log(addTwo0(5));
 
 /* note: both are functions, addone is basic functions and addTwo is using 
 variable to create function ie const */
+
+//3.
+console.log(addTwo(5));
+const addTwo = function(num){
+    return num + 2
+}
+/*output: Cannot access 'addTwo' before declaration
+we are calling function before declaring it(hoisting)
+
+declaring function while holding it into a variable causes this problem.
+we can asses before initialization in case or general function but not
+in case of variable holding function*/
