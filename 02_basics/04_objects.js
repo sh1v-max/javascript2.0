@@ -79,40 +79,67 @@ it will print all the key value painr in the form of aray inside another array.
 // //now lets check if a property is present or not
 console.log(tinderUser.hasOwnProperty('loggedIn'));  //true
 console.log(tinderUser.hasOwnProperty('loggedOut')); //false
-
 // //check ref image
 
 
-// console.log("==================================================");
-// const course = {
-//     coursename: "js in hindi",
-//     price: "999",
-//     courseInstructor: "wazir"
-// }
-// course.courseInstructor
-// course.coursename
-// course.price
-// //rather than using course. all the time, we can use something else...
+console.log("==================destructuring objects========================");
+//https://youtu.be/AViTh83k-IE?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=11
 
-// const {courseInstructor} = course
-// const {courseInstructor: instructor} = course
-// console.log(courseInstructor);
-// console.log(instructor);
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "wazir"
+}
+course.courseInstructor
+course.coursename
+course.price
+//rather than using course. all the time, we can use something else...
 
+const {courseInstructor} = course
+// course { value to extract} = from where to extract
+const {courseInstructor: instructor} = course
+// curresinstructor has been assigned with instructor variable
+console.log(courseInstructor);  //wazir 
+console.log(instructor);     //wazir
+//see the curly brackets and its is descctructuring
 
-// console.log("=============object destructuring==================");
+/*The destructuring assignment syntax is a JavaScript expression 
+that makes it possible to unpack values from arrays, or properties 
+from objects, into distinct variables. */
 
-// let user = {
-//     name0: "wazir baba",
-//     age: 25,
-//     city: "delhi"
-// }
-// let{name0, age, city} = user; // all parameters should be same as key inside object
-// console.log(name0);
-// console.log(age);
-// console.log(city);
+console.log("==============API=================");
 
-// // see the curly braces({}) and its destructuring.
+/*
+JSON 
+basic syntax: 
+{
+    "name": "wazir",
+    "coursename": "js in hindi",
+    "price": "free",
+}
+==> key and value, both are sting
+just like objects(within curly brackets) but without names and anything
+just curly bracket
+    {
+        content,
+    }
+
+//https://youtu.be/AViTh83k-IE?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&t=523
+watch video for better understanding of JSON    
+
+*/
+
+let user = {
+    name0: "wazir baba",
+    age: 25,
+    city: "delhi"
+}
+let{name0, age, city} = user; // all parameters should be same as key inside object
+console.log(name0);
+console.log(age);
+console.log(city);
+
+// see the curly braces({}) and its destructuring.
 
 
 
