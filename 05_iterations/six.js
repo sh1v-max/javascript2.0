@@ -2,7 +2,7 @@
 
 const coding = ["js", "ruby", "java", "python", "cpp" ]
 
-// what if we will store forif into a variable
+// what if we will store foreach into a variable
 
 const values = coding.forEach( (item) => {
     console.log(item);
