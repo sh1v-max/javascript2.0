@@ -36,7 +36,9 @@ function printMe(item0){
     console.log(item0);
 }
 
-coding.forEach(printMe)//passing ref of already created function
+coding.forEach(printMe)
+/*passing ref(printMe/ without parantheses) of already created function not calling or 
+printing function( printMe()/ with parantheses)*/
 
 
 console.log(`=====other arguments for foreach=======`);

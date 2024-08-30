@@ -34,7 +34,7 @@ A Map remembers the original insertion order of the keys.
 any value(both objects and primitive values) may be used as either 
 as a key or value
 
-maps are objects
+maps are objects and are not ITERABLE
 
 https://www.w3schools.com/js/js_maps.asp
 */
