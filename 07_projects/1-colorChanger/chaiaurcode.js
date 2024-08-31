@@ -1,4 +1,6 @@
 const buttons = document.querySelectorAll('.button');
+/* selecting class named "button" to manipulate it*/
+
 const body = document.querySelector('body');
 
 buttons.forEach(function (button) {

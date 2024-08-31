@@ -1,4 +1,6 @@
 const form = document.querySelector('form');
+/* getting element id named 'form' to manipulate
+output*/
 
 /*what if we will use this initialisation at the starting, ie after form (outside form), 
 it will automatically get value zero (empty) and 
